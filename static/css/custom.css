@@ -1,0 +1,25 @@
+/* LatentShield custom styles */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+.pulse-critical { animation: pulse-ring 1.6s infinite; }
+
+@keyframes blink-dot { 0%,100%{opacity:1} 50%{opacity:.3} }
+.live-dot { animation: blink-dot 1.2s infinite; }
+
+.nav-btn.active { background: #1e293b; color: #22d3ee; }
+
+.sev-INFO { color: #94a3b8; }
+.sev-WARNING { color: #f59e0b; }
+.sev-CRITICAL { color: #ef4444; font-weight: 600; }
+
+.gauge-arc { transition: stroke-dashoffset .8s ease, stroke .5s ease; }
+
+pre.json { white-space: pre-wrap; word-break: break-word; }
